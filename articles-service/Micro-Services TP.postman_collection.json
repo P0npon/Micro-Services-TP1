@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "c23c5962-b557-4528-adbc-5ca0e42ba2ac",
+		"name": "Micro-Services TP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/Articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":4,\r\n \"nom\": \"Poney en bois cracheur de feu\",\r\n \"prix\": 145,\r\n \"prixAchat\":200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/Articles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article with Price Greater than Specified",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/test/articles/500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"test",
+						"articles",
+						"500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/test/articles/like/Aspirateur Robot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"test",
+						"articles",
+						"like",
+						"Aspirateur Robot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/Articles/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":4,\r\n \"nom\": \"Poney en bois cracheur de feu\",\r\n \"prix\": 145\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get price diff for a given article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/AdminArticles/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminArticles",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Articles ordered by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/Articles/OrderByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles",
+						"OrderByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try Add price 0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":5,\r\n \"nom\": \"Poney en bois cracheur d'eau\",\r\n \"prix\": 0,\r\n \"prixAchat\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Articles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
